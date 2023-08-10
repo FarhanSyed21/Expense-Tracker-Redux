@@ -1,0 +1,45 @@
+.expenses-navbar {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: black;
+}
+
+.icon {
+  margin-right: 5px;
+  font-size: 18px;
+  vertical-align: middle;
+}
+
+.expense-verifyEmail {
+  display: flex;
+  align-items: center;
+  justify-tracks: space-between;
+}
+
+.expense-verifyEmail p {
+  padding-right: 10px;
+}
+
+.expenses-header {
+  font-family: "Times New Roman", Times, serif;
+  font-size: xx-large;
+  color: white;
+  padding-right: 800px;
+}
+
+.expenses-button {
+  background-color: rgb(235, 34, 34);
+  box-shadow: 1px 1px white;
+  margin-left: 10px;
+}
+
+.expenses-button:hover {
+  background-color: red;
+}
+
+.expense-verifyEmail a {
+  color: white;
+  text-decoration: none;
+}

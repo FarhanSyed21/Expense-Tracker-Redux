@@ -1,0 +1,82 @@
+.signup-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.form-container {
+  max-width: 500px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h2 {
+  text-align: center;
+}
+
+.form-container label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-container input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  box-sizing: border-box;
+}
+
+.form-container button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.form-container button:hover {
+  background-color: #0056b3;
+}
+
+.error-message {
+  border: 1px solid red;
+  padding: 10px;
+  color: rgb(109, 45, 45);
+  background-color: rgb(248, 133, 133);
+}
+
+.already-have-account {
+  margin-top: 20px;
+  border: 1px solid black;
+  padding: 10px 30px;
+  border-radius: 5px;
+  background-color: #abf7b1;
+  box-shadow: 5px 5px 1px rgb(49, 36, 36);
+}
+
+.form-container .password-input-container {
+  position: relative;
+}
+
+.form-container input {
+  padding-right: 40px;
+}
+
+.form-container .password-toggle-icon {
+  position: absolute;
+  top: 40%;
+  right: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}

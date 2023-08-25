@@ -1,4 +1,4 @@
-body {
+.app-body {
   background: radial-gradient(circle, #ff9900, #ff0000),
     linear-gradient(45deg, #ff9900, #ff0000);
   background-size: 100px 100px, 20px 20px;
@@ -15,11 +15,24 @@ body {
   justify-content: center;
   background-color: white;
   border-radius: 15px;
-  /* box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1); */
   box-shadow: 0px 0px 10px rgb(241, 54, 54), 0px 0px 20px rgb(226, 186, 57),
     0px 0px 30px rgb(255, 145, 55);
   margin: 50px auto;
   max-width: 1200px;
+  transition: background-color 1s;
+}
+
+.animate-bg-change {
+  animation: bgChangeAnimation 1s forwards;
+}
+
+@keyframes bgChangeAnimation {
+  0% {
+    background-color: white;
+  }
+  100% {
+    background-color: gray;
+  }
 }
 
 .expense-entry-from {

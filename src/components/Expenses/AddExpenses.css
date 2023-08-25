@@ -190,3 +190,21 @@ button {
 .delBtn:hover {
   opacity: 0.9;
 }
+
+@media screen and (max-width: 1200px) {
+  .add-expenses-container {
+    width: 100%;
+  }
+
+  .expense-entry-from {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .Expenses-Items {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+  }
+}

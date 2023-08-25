@@ -9,6 +9,11 @@ import "react-toastify/dist/ReactToastify.css";
 import { CSVLink } from "react-csv";
 
 const AddExpenses = () => {
+  const [
+    animateBackgroundColorChange,
+    setAnimateBackgroundColorChange
+  ] = useState(false);
+
   const expenses = useSelector((state) => state.listData.expenses);
   const editingId = useSelector((state) => state.listData.editingId);
   const dispatch = useDispatch();
@@ -252,15 +257,24 @@ const AddExpenses = () => {
   }, [expenses]);
 
   const handleBackgroundColorChange = () => {
-    setBackgroundColor((prevColor) =>
-      prevColor === "white" ? "gray" : "white"
-    );
+    setAnimateBackgroundColorChange(true);
+    setTimeout(() => {
+      setBackgroundColor((prevColor) =>
+        prevColor === "white" ? "gray" : "white"
+      );
+      setAnimateBackgroundColorChange(false);
+    }, 1000);
   };
 
   return (
-    <>
+    <div className="app-body">
       <Navbar />
-      <div className="add-expenses-container" style={{ backgroundColor }}>
+      <div
+        className={`add-expenses-container ${
+          animateBackgroundColorChange ? "animate-bg-change" : ""
+        }`}
+        style={{ backgroundColor }}
+      >
         <div className="expense-entry-from">
           <table className="expenses-table">
             <thead className="expenses-tableHead">
@@ -413,7 +427,7 @@ const AddExpenses = () => {
         </div>
       </div>
       <ToastContainer />
-    </>
+    </div>
   );
 };
 
